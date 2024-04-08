@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import controller.EditController?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.EditController" spacing="10">
+    <children>
+        <HBox spacing="10">
+            <Button fx:id="viewButton" text="View" onAction="#viewAction"/>
+            <Button fx:id="editButton" text="Edit" onAction="#editAction"/>
+            <Button fx:id="createButton" text="Create" onAction="#createAction"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <VBox spacing="10">
+                <Label text="Customers"/>
+                <ListView fx:id="customerList"/>
+                <Button fx:id="editCustomerInfoButton" text="Edit Customer Information" onAction="#editCustomerInfoAction"/>
+                <Button fx:id="addCustomerButton" text="Add a Customer" onAction="#addCustomerAction"/>
+                <Button fx:id="deleteCustomerButton" text="Delete a Customer" onAction="#deleteCustomerAction"/>
+            </VBox>
+
+            <VBox spacing="10">
+                <Label text="Supplements"/>
+                <ListView fx:id="supplementList"/>
+                <Button fx:id="editMagazineInfoButton" text="Edit Magazine Information" onAction="#editMagazineInfoAction"/>
+                <Button fx:id="editSupplementInfoButton" text="Edit Supplement Information" onAction="#editSupplementInfoAction"/>
+                <Button fx:id="addSupplementButton" text="Add Supplement" onAction="#addSupplementAction"/>
+                <Button fx:id="deleteSupplementButton" text="Delete Supplement" onAction="#deleteSupplementAction"/>
+            </VBox>
+        </HBox>
+    </children>
+</VBox>
